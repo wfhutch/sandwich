@@ -19,7 +19,7 @@
     "My sandwich has pickle, ketchup, mustard on it"
 */
 
-var picklesP = prompt("Would you like pickles?");
+var picklesP = prompt("Please answer 'yes' or 'no'. Would you like pickles?");
 var lettuceP = prompt("Lettuce?");
 var tomatoP = prompt("Tomato?");
 var ketchupP = prompt("Ketchup?");
@@ -93,10 +93,9 @@ function makeMeASandwich (Pickle, Lettuce, Tomato, Ketchup, Mustard, Mayo) {
  };
 
 var order = makeMeASandwich(picklesP, lettuceP, tomatoP, ketchupP, mustardP, mayoP);
+
+var lastItem = onSandwich.pop();
+onSandwich.push("and");
 var ingredients = onSandwich.join(", ");
-var sandwichEl = document.getElementById("sandwich")
-sandwichEl.innerHTML = ("My sandwich has " + ingredients + ".");
-
-
-
+document.getElementById("sandwich").innerHTML = ("My sandwich has " + ingredients + " " + lastItem + ".");
 
