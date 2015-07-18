@@ -94,8 +94,8 @@ function makeMeASandwich (Pickle, Lettuce, Tomato, Ketchup, Mustard, Mayo) {
 
 var order = makeMeASandwich(picklesP, lettuceP, tomatoP, ketchupP, mustardP, mayoP);
 
+onSandwich.splice(-1, 0, "and");
 var lastItem = onSandwich.pop();
-onSandwich.push("and");
 var ingredients = onSandwich.join(", ");
 document.getElementById("sandwich").innerHTML = ("My sandwich has " + ingredients + " " + lastItem + ".");
 
